@@ -16,7 +16,7 @@ export async function GetManyReference<T extends ra.Record>(
   log('GetManyReference', { resourceName, params });
   const filterSafe = params.filter || {};
   const collectionQuery = filterSafe.collectionQuery;
-  const r = await rm.TryGetResource(resourceName, undefined, collectionQuery);
+  const r = await rm.TryGetResource(resourceName, 'REFRESH', collectionQuery);
   delete filterSafe.collectionQuery;
   log('apiGetManyReference', { resourceName, resource: r, params });
   const data = r.list;

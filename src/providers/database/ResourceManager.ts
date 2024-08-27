@@ -76,14 +76,14 @@ export class ResourceManager {
     relativePath: string,
     collectionQuery: messageTypes.CollectionQueryType | undefined
   ) {
-    if (this.options?.lazyLoading?.enabled) {
+ /*   if (this.options?.lazyLoading?.enabled) {
       logWarn('resourceManager.RefreshResource', {
         warn: 'RefreshResource is not available in lazy loading mode',
       });
       throw new Error(
         'react-admin-firebase: RefreshResource is not available in lazy loading mode'
       );
-    }
+    }*/
 
     log('resourceManager.RefreshResource', { relativePath, collectionQuery });
     await this.initPath(relativePath);

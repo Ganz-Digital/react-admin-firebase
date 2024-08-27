@@ -26,7 +26,7 @@ export async function GetList<T extends ra.Record>(
   const collectionQuery = filterSafe.collectionQuery;
   delete filterSafe.collectionQuery;
 
-  const r = await rm.TryGetResource(resourceName, undefined, collectionQuery);
+  const r = await rm.TryGetResource(resourceName, 'REFRESH', collectionQuery);
   const data = r.list;
   if (params.sort != null) {
     const { field, order } = params.sort;
