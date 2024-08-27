@@ -37,9 +37,9 @@ export class ResourceManager {
     refresh?: 'REFRESH',
     collectionQuery?: messageTypes.CollectionQueryType
   ): Promise<IResource> {
-  /*  if (refresh) {
+    if (refresh) {
       await this.RefreshResource(resourceName, collectionQuery);
-    }*/
+    }
     return this.TryGetResourcePromise(resourceName, collectionQuery);
   }
 
